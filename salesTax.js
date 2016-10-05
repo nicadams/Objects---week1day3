@@ -31,14 +31,11 @@ function calculateSalesTax(companySalesData, salesTaxRates) {
       var taxCalc = salesSum * provTaxRate;
 
       if (newObj[compName] === undefined) {
-      newObj[compName] = {};
-      newObj[compName].totalSales = salesSum;
-      newObj[compName].totalTaxes = taxCalc;
+      newObj[compName] = {totalSales: salesSum, totalTaxes: taxCalc};
       }
       else {
         newObj[compName].totalSales += salesSum;
         newObj[compName].totalTaxes += taxCalc;
-
       }
   }
 
