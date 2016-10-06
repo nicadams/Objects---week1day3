@@ -23,12 +23,6 @@ var library = {
              },
 
 
-// FUNCTIONS TO IMPLEMENT:
-
-// prints a list of all playlists, in the form:
-// p01: Coding Music - 2 tracks
-// p02: Other Playlist - 1 tracks
-
 printPlaylists: function () {
   for (var playlistId in this.playlists) {
     var playlist = this.playlists[playlistId];
@@ -36,11 +30,6 @@ printPlaylists: function () {
   }
 },
 
-
-// prints a list of all tracks, in the form:
-// t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
-// t02: Model View Controller by James Dempsey (WWDC 2003)
-// t03: Four Thirty-Three by John Cage (Woodstock 1952)
 
 printTracks: function () {
 
@@ -50,12 +39,6 @@ printTracks: function () {
   }
 },
 
-
-
-// prints a list of tracks for a given playlist, in the form:
-// p01: Coding Music - 2 tracks
-// t01: Code Monkey by Jonathan Coulton (Thing a Week Three)
-// t02: Model View Controller by James Dempsey (WWDC 2003)
 
 printPlaylist: function (playlistId) {
 
@@ -72,8 +55,6 @@ printPlaylist: function (playlistId) {
 
 
 
-// adds an existing track to an existing playlist
-
 addTrackToPlaylist: function (trackId, playlistId) {
   var trackList = this.playlists[playlistId].tracks;
   trackList.push(trackId);
@@ -82,22 +63,11 @@ addTrackToPlaylist: function (trackId, playlistId) {
 
 
 
-
-// generates a unique id
-// (use this for addTrack and addPlaylist)
-
-
-
-// console.log(uid());
-// adds a track to the this
-
 addTrack: function (name, artist, album) {
   this.tracks[uid()] = {name: name, artist: artist, album: album}
   console.log(this.tracks);
 },
 
-
-// adds a playlist to the this
 
 addPlaylist: function (name) {
   var uID = uid();
@@ -106,16 +76,6 @@ addPlaylist: function (name) {
 },
 }
 
-
-// STRETCH:
-// given a query string string, prints a list of tracks
-// where the name, artist or album contains the query string (case insensitive)
-// tip: use "string".search("tri")
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search
-
-// var printSearchResults = function(query) {
-
-// }
 
 library.printPlaylists();
 
